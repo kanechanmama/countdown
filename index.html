@@ -16,7 +16,7 @@ body {
 }
 
 #timer {
-  font-size: 6vw;
+  font-size: clamp(16px, 3vw, 28px);
   font-weight: bold;
   text-align: center;
 }
@@ -35,7 +35,7 @@ function update() {
   const diff = target - now;
 
   if (diff <= 0) {
-    document.getElementById("timer").textContent = "販売中！今すぐアクセス！";
+    document.getElementById("timer").textContent = "終了しました";
     return;
   }
 
